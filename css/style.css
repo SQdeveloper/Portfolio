@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 5.5rem;
+}
+
+nav {
+    position: fixed;
+    z-index: 15;
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.options-bar {
+    display: flex;
+    gap: 2rem;
+    margin-right: 2rem;
+}
+
+.options-bar a {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: all .5s;
+    font-size: 17px;
+}
+
+hr {
+    width: 40%;
+    border: none;
+    margin: 0.7rem 0 0 .5rem;
+    height: .2rem;
+    border-top: 1px solid #bbb;
+}
+
+.cont-title {
+    display: flex;
+    align-items: center;
+    color:#09707e;
+    font-size: 25px;
+    margin-bottom: 2rem;
+}
+
+.cont-title h1 {
+    margin: 0;
+}
+
+.options-bar a:hover {
+    color: #13d3ec;
+}
+
+.home {
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#photo-home {
+    width: 100%;
+}
+
+#photo-home img {
+    width: 100%;
+    height: 100vh;
+}
+
+#my-photo {
+    position: absolute;
+    margin-bottom: 11rem;
+}
+
+#my-photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.cont-name {
+    position: absolute;
+    backdrop-filter: blur(10px);
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-top: 11rem;
+    text-align: center;
+    color: white;
+}
+
+.cont-name .text-name {
+    color: #13d3ec;
+}
+
+.about-me {
+    width: 80%;
+    margin: auto;
+    opacity: 0;
+    transition: all 2s;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    opacity: 0;
+    transition: all 2s;
+}
+
+.skills .cont-cards {
+    width: 100%;
+}
+.skills .cont-cards picture.swiper-slide {
+    height: 200px;
+    border-radius: 15px;
+}
+
+.skills .cont-cards picture.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills .cont-cards picture.swiper-slide img {
+    width: 120px;
+    height: 120px;
+}
+
+.skills .swiper-wrapper {
+    width: 600px;
+}
+
+.skills .slide-content {
+    margin: 0 40px;
+    overflow: hidden;
+}
+
+.skills .button-change::before,
+.skills .button-change::after{
+    color:#0da4b8;
+    font-size: 25px;
+}
+
+.skills .swiper-pagination-bullet {
+    background-color: #09707e;
+}
+
+.skills .swiper-pagination-bullet-active {
+    background-color: #097988;
+}
+
+.proyects {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 80%;
+    margin: auto;
+    opacity: 0;
+    transition: all 2s;
+}
+
+.proyects .container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.proyects .container-cards .cont-card {
+    width: 330px;
+    height: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.proyects .container-cards .cont-card:hover > .card{
+    transform: scale(1.5);
+}
+
+.proyects .container-cards .cont-card:hover > .card-second {
+    transform: translateY(-13.9rem);
+}
+
+.proyects .card{
+    border-radius: 5px;
+    background-color: rgb(172, 169, 169);
+    background-color: black;
+    transition: all 0.8s;
+}
+
+.proyects .card .img-proy {
+    width: 300px;
+    height: 200px;
+}
+
+.proyects .card-second {
+    width: 330px;
+    height: 200px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    transition: all 0.8s;
+}
+
+.proyects .card-second h3 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.proyects .card-second button {
+    border: none;
+    border-radius: 3px;
+    height: 1.5rem;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.proyects .card-second picture {
+    display: flex;
+    gap: 6px;
+}
+
+.proyects .card-second img{
+    width: 13px;
+    height: 13px;
+    color: #ffffff;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(87deg) brightness(104%) contrast(101%);
+}
+
+.information {
+    background-color:rgb(214, 213, 213);
+    display: flex;
+    opacity: 0;
+    color: white;
+    transition: all 2s;
+    text-align: center;
+}
+
+.information .cont-curriculum {
+    width: 50%;
+    height: 32.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #033F47;
+}
+
+.information .cont-curriculum .cont-text {
+    background-color: #033F47;
+    border: 8px solid #EFEEE5;
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+    cursor: pointer;
+    font-size:x-large;
+}
+
+.information .cont-curriculum:hover > .cont-text{
+    border-radius: 5px;
+}
+
+.information .cont-curriculum .cont-text a{
+    text-decoration: none;
+    color: #EFEEE5;
+    font-size: xx-large;
+}
+
+.information .cont-contact {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EFEEE5;
+}
+
+
+.information .cont-contact .cont-text {
+    background-color: #EFEEE5;
+    border: 8px solid #033F47;
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.information .cont-contact .cont-text p{
+    text-decoration: none;
+    color: #033F47;
+    font-size: xx-large;
+}
+
+.information .cont-contact:hover > .cont-text{
+    border-radius: 5px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    background-color: #060606;
+    opacity: 0;
+    color: white;
+    transition: all 2s;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    padding-top: 0.7rem;
+    font-size:small;
+}
+
+.footer #rights {
+    padding-top: 0.5rem;
+}
+
+.footer .copy {
+    margin: auto;   
+    margin-top: 0;
+}
+
+.footer picture {
+    position: absolute;
+    right: 0;
+    margin-right: 1rem;
+}
+
+.footer img {
+    width: 20px;
+    height: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    filter: invert(54%) sepia(0%) saturate(23%) hue-rotate(141deg) brightness(89%) contrast(81%);
+}
+
+.footer img:hover {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(244deg) brightness(104%) contrast(101%);
+}
