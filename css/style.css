@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,600&display=swap');
 
+:root {
+    --verdeOscuro: #09707e;
+}
+
 body {
     margin: 0;
     font-family: 'Playfair Display', serif;
@@ -22,6 +26,22 @@ nav {
     transition: all 0.5s;
 }
 
+.menu-bar h1 {
+    position: absolute;
+    color: white;
+    left: 2.5rem;
+}
+
+.menu-bar h1::before {
+    content: "< ";
+    color: #13d3ec;
+}
+
+.menu-bar h1::after {
+    content: " />";
+    color: #13d3ec;
+}
+
 .options-bar {
     display: flex;
     gap: 2rem;
@@ -36,8 +56,12 @@ nav {
     font-size: 17px;
 }
 
+.options-bar a:first-child {
+    color: #13d3ec;
+}
+
 hr {
-    width: 40%;
+    width: 30%;
     border: none;
     margin: 0.7rem 0 0 .5rem;
     height: .2rem;
@@ -47,7 +71,7 @@ hr {
 .cont-title {
     display: flex;
     align-items: center;
-    color:#09707e;
+    color:var(--verdeOscuro);
     font-size: 25px;
     margin-bottom: 2rem;
 }
@@ -101,62 +125,86 @@ hr {
     color: #13d3ec;
 }
 
+.cont-name picture {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.cont-name picture img {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(306deg) brightness(104%) contrast(101%);
+    padding-right: .3rem;
+}
+
+.cont-name picture a {
+    text-decoration: none;
+    color: white    ;
+    background-color: black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: .2rem;
+    transition: transform .2s;
+}
+
+.cont-name picture a:hover {
+    transform: scale(1.1);
+    color: #13d3ec;
+}
+
+.cont-name picture a:hover > img {
+    filter: invert(68%) sepia(96%) saturate(1399%) hue-rotate(137deg) brightness(98%) contrast(89%);
+
+}
+
+.cont-name h1 {
+    margin: .5rem 0.5rem;
+}
+
 .about-me {
     width: 80%;
     margin: auto;
     opacity: 0;
-    transition: all 2s;
+    transition: all 2s;    
 }
 
-.skills {
+.cont-about {
     display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: auto;
-    opacity: 0;
-    transition: all 2s;
+    gap: 2rem;
 }
 
-.skills .cont-cards {
-    width: 100%;
-}
-.skills .cont-cards picture.swiper-slide {
-    height: 200px;
-    border-radius: 15px;
+.cont-about .presentacion {
+    width: 50%;
 }
 
-.skills .cont-cards picture.swiper-slide {
+.cont-about .presentacion h2 {
+    color: #368893;
+}
+
+.cont-about .skills {
+    width: 50%;
+    text-align: center;
+}
+
+.cont-about .skills h2 {
+    color: #368893;
+}
+
+.cont-about .skills picture {
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
-.skills .cont-cards picture.swiper-slide img {
-    width: 120px;
-    height: 120px;
+.cont-about .skills picture img {
+    margin-bottom: .5rem;
 }
 
-.skills .swiper-wrapper {
-    width: 600px;
-}
-
-.skills .slide-content {
-    margin: 0 40px;
-    overflow: hidden;
-}
-
-.skills .button-change::before,
-.skills .button-change::after{
-    color:#0da4b8;
-    font-size: 25px;
-}
-
-.skills .swiper-pagination-bullet {
-    background-color: #09707e;
-}
-
-.skills .swiper-pagination-bullet-active {
-    background-color: #097988;
+.cont-about .skills span {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .proyects {
@@ -171,6 +219,7 @@ hr {
 
 .proyects .container-cards {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 1.5rem;
 }
@@ -195,6 +244,21 @@ hr {
     background-color: rgb(172, 169, 169);
     background-color: black;
     transition: all 0.8s;
+    display: flex;
+}
+
+.proyects .card span {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.proyects .card span p {
+    word-wrap: break-word;
+    text-align: center;
+    width: 10px;
+    color: white;
 }
 
 .proyects .card .img-proy {
@@ -219,17 +283,28 @@ hr {
 }
 
 .proyects .card-second button {
+    font-family: 'Playfair Display', serif;
     border: none;
     border-radius: 3px;
-    height: 1.5rem;
+    height: 1.8rem;
     background-color: black;
     color: white;
     cursor: pointer;
+    transition: color .3s;
+}
+
+.proyects .card-second button:hover {
+    color: #13d3ec;
+}
+
+.proyects .card-second button:hover > picture img {
+    filter: invert(68%) sepia(96%) saturate(1399%) hue-rotate(137deg) brightness(98%) contrast(89%);
 }
 
 .proyects .card-second picture {
     display: flex;
     gap: 6px;
+    align-items: center;
 }
 
 .proyects .card-second img{
