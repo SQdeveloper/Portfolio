@@ -15,7 +15,7 @@ body {
     gap: 5.5rem;
 }
 
-nav {
+.menu-bar {
     position: fixed;
     z-index: 15;
     width: 100%;
@@ -44,8 +44,10 @@ nav {
 
 .options-bar {
     display: flex;
+    /* justify-content: center; */
     gap: 2rem;
     margin-right: 2rem;
+    text-align: center;
 }
 
 .options-bar a {
@@ -154,7 +156,6 @@ hr {
 
 .cont-name picture a:hover > img {
     filter: invert(68%) sepia(96%) saturate(1399%) hue-rotate(137deg) brightness(98%) contrast(89%);
-
 }
 
 .cont-name h1 {
@@ -236,8 +237,9 @@ hr {
 }
 
 .proyects .container-cards .cont-card:hover > .card-second {
-    transform: translateY(-13.9rem);
+    transform: translateY(calc(-100% - 1.05rem));
 }
+
 
 .proyects .card{
     border-radius: 5px;
@@ -245,6 +247,8 @@ hr {
     background-color: black;
     transition: all 0.8s;
     display: flex;
+    width: inherit;
+    height: inherit;
 }
 
 .proyects .card span {
@@ -433,4 +437,163 @@ hr {
 
 .footer img:hover {
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(244deg) brightness(104%) contrast(101%);
+}
+
+@media screen and (max-width:1020px) {
+    .cont-about .skills picture img {
+        width: 4rem;
+    }
+}
+
+@media screen and (max-width:860px) {
+    .proyects .container-cards .cont-card {
+        width: 280px;
+        height: 170px;
+    }
+    .proyects .card{
+        width: inherit;
+        height: inherit;
+    }
+    .proyects .card .img-proy {
+        width: 250px;
+        height: 170px;
+    }
+    .proyects .card-second {
+        width: 280px;
+        height: 170px;
+    }
+    .information .cont-curriculum {
+        height: 25rem;
+    }
+    .information .cont-contact {
+        height: 25rem;
+    }
+}
+
+@media screen and (max-width:745px) {
+    .cont-about {
+        flex-direction: column;
+    }
+    .cont-about .presentacion {
+        width: 100%;
+    }
+    .cont-about .skills {
+        width: 100%;
+    }
+    .cont-about .skills picture {
+        gap: 2.3rem;
+    }
+}
+
+@media screen and (max-width:730px) {
+    .proyects .container-cards .cont-card {
+        width: 400px;
+        height: 250px;
+    }
+    .proyects .card .img-proy {
+        width: 370px;
+        height: 250px;
+    }
+    .proyects .card-second {
+        width: 400px;
+        height: 250px;
+    }
+    .proyects .container-cards .cont-card:hover > .card-second {
+        transform: translateY(calc(-100% - 1.15rem));
+    }
+    .information .cont-curriculum .cont-text {
+        width: 230px;
+        height: 230px;
+    }
+    .information .cont-contact .cont-text {
+        width: 230px;
+        height: 230px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #my-photo img {
+        width: 180px;
+        height: 180px;
+    }
+    .cont-name {
+        font-size: .8rem;
+    }
+    .menu-bar h1 {
+        opacity: 0;
+    }
+    .menu-bar {
+        justify-content: center;
+    }
+    .options-bar {
+        gap: 4rem;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .proyects .container-cards .cont-card {
+        width: 330px;
+        height: 200px;
+    }
+    .proyects .card .img-proy {
+        width: 300px;
+        height: 200px;
+    }
+    .proyects .card-second {
+        width: 330px;
+        height: 200px;
+    }
+    .information {
+        flex-direction: column;
+    }
+    .information .cont-curriculum {
+        width: 100%;
+    }
+    .information .cont-contact {
+        width: 100%;
+    }
+    .information .cont-curriculum .cont-text {
+        width: 300px;
+        height: 300px;
+    }
+    .information .cont-contact .cont-text {
+        width: 300px;
+        height: 300px;
+    }
+    .options-bar {
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .proyects .container-cards .cont-card {
+        width: 300px;
+        height: 170px;
+    }
+    .proyects .card .img-proy {
+        width: 270px;
+        height: 170px;
+    }
+    .proyects .card-second {
+        width: 300px;
+        height: 170px;
+    }
+    .information .cont-curriculum .cont-text {
+        width: 250px;
+        height: 250px;
+    }
+    .information .cont-contact .cont-text {
+        width: 250px;
+        height: 250px;
+    }
+    .information .cont-curriculum {
+        height: 22rem;
+    }
+    .information .cont-contact {
+        height: 22rem;
+    }
+    .options-bar {
+        gap: 2rem;
+    }
 }
