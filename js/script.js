@@ -24,6 +24,12 @@ buttonProyects[2].addEventListener("click", ()=>{
 buttonProyects[3].addEventListener("click", ()=>{
     window.open("https://github.com/SQdeveloper/Page-Anime");
 });
+buttonProyects[4].addEventListener("click", ()=>{
+    window.open("https://sqdeveloper.github.io/cubePage/");
+});
+buttonProyects[5].addEventListener("click", ()=>{
+    window.open("https://github.com/SQdeveloper/cubePage.git");
+});
 
 //For para cuando el mause ingrese en las imagenes(lengProgramacion) se agrege una clase que permite ejecutar una animacion 
 for(let i = 0; i<8; i++){
@@ -78,37 +84,3 @@ addEventListener("scroll", ()=>{
 textContact.addEventListener("click", ()=>{
     window.location = "form.html";
 });
-
-//Esta seccion es para modificar el slide(el contenedor donde se deslizan las imagenes)
-var swiper = new Swiper(".slide-content", {
-    slidesPerView: 4,
-    spaceBetween: 25,
-    loop: true,
-    centerSlide: 'true',
-    fade: 'true',
-    grabCursor: 'true',
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-
-    breakpoints: {
-        0: {
-            slidesPerView: 1,
-        },
-        580: {
-            slidesPerView: 2,
-        },
-        780: {
-            slidesPerView: 3,
-        },
-        1020: {
-            slidesPerView: 4,
-        }
-    }
-  });
