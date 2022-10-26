@@ -30,6 +30,12 @@ buttonProyects[4].addEventListener("click", ()=>{
 buttonProyects[5].addEventListener("click", ()=>{
     window.open("https://github.com/SQdeveloper/cubePage.git");
 });
+buttonProyects[6].addEventListener("click", ()=>{
+    window.open("https://sqdeveloper.github.io/Card-Debito/");
+});
+buttonProyects[7].addEventListener("click", ()=>{
+    window.open("https://github.com/SQdeveloper/Card-Debito.git");
+});
 
 //For para cuando el mause ingrese en las imagenes(lengProgramacion) se agrege una clase que permite ejecutar una animacion 
 for(let i = 0; i<8; i++){
