@@ -78,8 +78,9 @@ form input:hover , input:focus{
     border-color:gray;
 }
 
-form input#message {
+form textarea {
     height: 15rem;
+    width: 80%;
 }
 
 form button {
